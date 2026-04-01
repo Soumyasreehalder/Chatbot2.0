@@ -1,0 +1,22 @@
+2026-02-18T09:05:12.102+05:30 INFO  [BOOT] StoreOrderPro v3.8.4 starting on STORE-WS-27 (storeId=STR-042).
+2026-02-18T09:05:12.450+05:30 INFO  [CONFIG] Loaded profile=PROD, region=APAC, api=https://api.storeorderpro.internal.
+2026-02-18T09:06:02.011+05:30 INFO  [HEALTH] Device uptime=11d 18h 42m; freeRAM=2.1GB/8GB; diskFree=28%.
+2026-02-18T09:07:43.221+05:30 WARN  [NET] DNS resolution timeout for host=api.storeorderpro.internal after 5000ms.
+2026-02-18T09:07:43.225+05:30 ERROR [NET] NetworkException code=DNS_NAME_ERROR message='dns.exe blocked by endpoint policy' correlationId=6a2b3f31-12cd-4f9d-9a33-9b9a7a4d1d92.
+2026-02-18T09:08:10.083+05:30 INFO  [RETRY] Retrying DNS using fallbackResolver=10.12.0.53 (attempt=1/3).
+2026-02-18T09:08:15.517+05:30 ERROR [RETRY] Fallback DNS failed code=TIMEOUT host=api.storeorderpro.internal.
+2026-02-18T09:12:32.606+05:30 INFO  [SVC] Background job 'PromoEngineRefresh' completed in 842ms (records=128).
+2026-02-18T09:15:02.070+05:30 INFO  [AUTH] Login success user=store123\jane.doe role=Cashier ip=10.2.17.45.
+2026-02-18T09:17:10.404+05:30 INFO  [ORDER] CreateOrder request orderId=SO-20260218-000123 items=7 total=₹12,480 correlationId=1e3db7f2-5ad1-4e4e-9c0c-77b2fd34a1a1.
+2026-02-18T09:17:45.902+05:30 WARN  [PERF] Slow API response op=SubmitOrder latency=12.8s endpoint=/orders/submit server=app-srv-02.
+2026-02-18T09:18:00.115+05:30 ERROR [ORDER] OrderSubmissionException upstream=502 msg='Upstream gateway timeout' correlationId=1e3db7f2-5ad1-4e4e-9c0c-77b2fd34a1a1.
+2026-02-18T09:18:02.991+05:30 WARN  [HEALTH] Remote health indicates high memory server=app-srv-02 memUsed=91% swap=22%.
+2026-02-18T09:19:11.320+05:30 INFO  [SYNC] InventorySync started (delta window=5m).
+2026-02-18T09:20:30.044+05:30 INFO  [OPS] Action recorded: 'Restart DNS Client' by user=it.support on STORE-WS-27.
+2026-02-18T09:21:02.210+05:30 INFO  [SEC] Policy update received: dns.exe whitelisted, ruleId=POL-53-ALLOW-2026-0218.
+2026-02-18T09:22:18.765+05:30 INFO  [NET] DNS resolution success host=api.storeorderpro.internal ip=10.12.0.40 latency=32ms.
+2026-02-18T09:23:12.612+05:30 INFO  [ORDER] Retrying submit order orderId=SO-20260218-000123 result=SUCCESS http=200 latency=1.42s.
+2026-02-18T09:27:43.240+05:30 INFO  [REPORT] ZReport generation completed in 3.1s (sales=₹2,34,900).
+2026-02-18T09:33:02.808+05:30 WARN  [UI] Rendering delay panel='OrderHistory' duration=420ms (acceptable<250ms).
+2026-02-18T09:40:00.055+05:30 INFO  [HEALTH] App stable memServer=64% apiLatencyP95=480ms errorRate=0.3%.
+2026-02-18T09:41:18.910+05:30 INFO  [AUDIT] User logout user=store123\jane.doe session=8f9d214e-cf2e-4a7a-8293-2b3dd0c0f9c1.
